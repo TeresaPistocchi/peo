@@ -150,6 +150,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#evaluatesCondition">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#ProblemCondition"/>
+        <rdfs:comment>Proprietà che collega un processo di verifica a una condizione del problema originale, consentendo di identificare le condizioni esaminate durante la valutazione delle risposte candidate nell&apos;ambito della tecnica Self-Verification.</rdfs:comment>
+        <rdfs:label>evaluates condition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -183,8 +185,11 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#followsRefinementIteration">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#precedesRefinementIteration"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
+        <rdfs:comment>Proprietà che collega un&apos;iterazione del processo Self-Refine all&apos;iterazione che la precede, consentendo di ricostruire l&apos;ordine dei passaggi di raffinamento anche in direzione inversa.</rdfs:comment>
+        <rdfs:label>follows refinement iteration</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -236,6 +241,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasFeedback">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Feedback"/>
+        <rdfs:comment>Proprietà che collega un&apos;iterazione del processo Self-Refine al feedback generato per valutare la risposta ricevuta come input, individuando gli aspetti da migliorare nella successiva fase di raffinamento.</rdfs:comment>
+        <rdfs:label>has Feedback</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -256,6 +263,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasFollowUpQuestion">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#PromptingTechnique"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#FollowUpQuestion"/>
+        <rdfs:comment>Proprietà che collega un&apos;istanza della tecnica Self-Ask alle domande di approfondimento generate per scomporre un problema complesso in quesiti più semplici, le cui risposte intermedie contribuiscono alla costruzione della risposta finale.</rdfs:comment>
+        <rdfs:label>has follow-up question</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -265,6 +274,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasInputResponse">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Response"/>
+        <rdfs:comment>Proprietà che collega un&apos;iterazione del processo Self-Refine alla risposta utilizzata come input. Tale risposta viene sottoposta a valutazione e raffinamento e può corrispondere alla risposta iniziale oppure al risultato di un&apos;iterazione precedente.</rdfs:comment>
+        <rdfs:label>has input response</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -274,6 +285,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasIntermediateAnswer">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#FollowUpQuestion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#IntermediateAnswer"/>
+        <rdfs:comment>Proprietà che collega una domanda di approfondimento alla risposta intermedia ottenuta durante l&apos;applicazione della tecnica Self-Ask. Tale relazione permette di associare a ciascuna domanda la relativa risposta, contribuendo alla ricostruzione del processo di ragionamento.</rdfs:comment>
+        <rdfs:label>has intermediate answer</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -307,6 +320,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#FollowUpQuestion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#IntermediateAnswer"/>
+        <rdfs:comment>Proprietà che collega una domanda di approfondimento alla risposta intermedia ottenuta in un passaggio precedente della tecnica Self-Ask. Tale relazione consente di rappresentare la dipendenza tra domande consecutive e di ricostruire la sequenza del ragionamento.</rdfs:comment>
+        <rdfs:label>has previous intermediate answer</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -316,6 +331,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasRefinedResponse">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Response"/>
+        <rdfs:comment>Proprietà che collega un&apos;iterazione del processo Self-Refine alla risposta raffinata ottenuta attraverso l&apos;applicazione del feedback. La risposta risultante può essere utilizzata come input per un&apos;iterazione successiva.</rdfs:comment>
+        <rdfs:label>has refined response</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -325,6 +342,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasRefinementIteration">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#PromptingTechnique"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
+        <rdfs:comment>Proprietà che collega un&apos;istanza della tecnica Self-Refine alle iterazioni che costituiscono il processo di raffinamento. Ogni iterazione rappresenta un passaggio nel quale una risposta viene valutata attraverso un feedback e successivamente migliorata.</rdfs:comment>
+        <rdfs:label>has refinement iteration</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -334,6 +353,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasRephrasedQuestion">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#PromptingTechnique"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RephrasedQuestion"/>
+        <rdfs:comment>Proprietà che collega un&apos;istanza della tecnica Rephrase and Respond (RaR) alla domanda riformulata ottenuta dalla richiesta originale, consentendo di rappresentare il risultato della fase di riformulazione.</rdfs:comment>
+        <rdfs:label>has rephrased question</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -365,6 +386,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasVerificationProcess">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#PromptingTechnique"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess"/>
+        <rdfs:comment>Proprietà che collega un&apos;istanza della tecnica Self-Verification al processo di verifica associato, consentendo di identificare la procedura utilizzata per valutare la correttezza delle risposte candidate.</rdfs:comment>
+        <rdfs:label>has verification process</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -445,6 +468,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#isRephrasedFrom">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RephrasedQuestion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Prompt"/>
+        <rdfs:comment>Proprietà che collega una domanda riformulata al prompt originale dal quale è stata ricavata mediante la tecnica Rephrase and Respond (RaR), permettendo di identificare la richiesta iniziale e la corrispondente riformulazione.</rdfs:comment>
+        <rdfs:label>is rephrased from</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -454,6 +479,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#masksCondition">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#ProblemCondition"/>
+        <rdfs:comment>Proprietà che collega un processo di verifica a una condizione del problema originale che viene mascherata durante l&apos;applicazione della modalità Condition Mask Verification. Il mascheramento consente di verificare la correttezza delle risposte candidate attraverso la ricostruzione della condizione.</rdfs:comment>
+        <rdfs:label>masks Condition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -465,6 +492,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
+        <rdfs:comment>Proprietà che collega un&apos;iterazione del processo Self-Refine a quella successiva, consentendo di rappresentare l&apos;ordine di esecuzione delle iterazioni nel processo di raffinamento delle risposte.</rdfs:comment>
+        <rdfs:label>precedes refinement iteration</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -474,6 +503,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#selectsCandidateAnswer">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#CandidateAnswer"/>
+        <rdfs:comment>Proprietà che collega un processo di verifica alla risposta candidata selezionata al termine della valutazione, identificando quella ritenuta più attendibile nell&apos;ambito della tecnica Self-Verification.</rdfs:comment>
+        <rdfs:label>selects candidate answer</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -492,6 +523,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#verifiesCandidateAnswer">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#CandidateAnswer"/>
+        <rdfs:comment>Proprietà che collega un processo di verifica a una risposta candidata sottoposta a valutazione nell&apos;ambito della tecnica Self-Verification, consentendo di identificare le risposte esaminate durante il processo.</rdfs:comment>
+        <rdfs:label>verifies candidate answer</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -521,6 +554,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasOriginalValue">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#NumericProblemCondition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Proprietà che associa a una condizione numerica del problema il suo valore originale, utilizzato come riferimento nel processo Condition Mask Verification per confrontarlo con il valore ricostruito durante la verifica.</rdfs:comment>
+        <rdfs:label>has original value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -530,6 +565,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasPredictedValue">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#ConditionMaskVerification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Proprietà che associa a un processo Condition Mask Verification il valore numerico ricostruito a partire dalle risposte candidate. Tale valore viene confrontato con quello originale della condizione mascherata per verificarne la correttezza.</rdfs:comment>
+        <rdfs:label>has predicted value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -539,6 +576,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasTruthValue">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#TrueFalseItemVerification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Proprietà che associa a un processo True-False Item Verification un valore booleano, vero o falso, utilizzato per rappresentare l&apos;esito della verifica di correttezza nell&apos;ambito della tecnica Self-Verification.</rdfs:comment>
+        <rdfs:label>has truth value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -548,6 +587,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasVerificationScore">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#CandidateAnswer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Proprietà che associa a una risposta candidata un punteggio numerico ottenuto durante il processo di verifica della tecnica Self-Verification, consentendo di confrontare i risultati della valutazione e individuare la risposta più attendibile.</rdfs:comment>
+        <rdfs:label>has verification score</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -657,6 +698,8 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#CandidateAnswer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Classe che rappresenta un processo di verifica a ritroso delle risposte candidate, utilizzato dalla tecnica Self-Verification per valutarne la correttezza rispetto al problema iniziale. Il processo può essere effettuato attraverso differenti modalità di verifica.</rdfs:comment>
+        <rdfs:label>Backward Verification</rdfs:label>
     </owl:Class>
     
 
@@ -671,6 +714,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Classe che rappresenta una possibile risposta a un problema, sottoposta a un processo di verifica nell&apos;ambito della tecnica Self-Verification. Le risposte candidate vengono valutate per determinarne la correttezza e selezionare quella più attendibile.</rdfs:comment>
+        <rdfs:label>Candidate Answer</rdfs:label>
     </owl:Class>
     
 
@@ -725,6 +770,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Classe che rappresenta una modalità di verifica a ritroso basata sul mascheramento di una o più condizioni del problema iniziale. La verifica consiste nel ricostruire le condizioni mascherate a partire dalle risposte candidate, per valutarne la correttezza e la coerenza con il problema originale.</rdfs:comment>
+        <rdfs:label>Condition Mask Verification</rdfs:label>
     </owl:Class>
     
 
@@ -776,6 +823,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Feedback">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Response"/>
+        <rdfs:comment>Classe che rappresenta la valutazione di una risposta durante un&apos;iterazione della tecnica Self-Refine. Il feedback identifica gli aspetti da correggere o migliorare e fornisce le indicazioni necessarie per generare una risposta raffinata.</rdfs:comment>
+        <rdfs:label>Feedback</rdfs:label>
     </owl:Class>
     
 
@@ -785,11 +834,19 @@
     <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#FollowUpQuestion">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasPreviousIntermediateAnswer"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#IntermediateAnswer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasIntermediateAnswer"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#IntermediateAnswer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Classe che rappresenta una domanda di approfondimento generata durante l&apos;applicazione della tecnica Self-Ask. Ogni domanda contribuisce alla scomposizione del problema iniziale ed è associata a una risposta intermedia utilizzata nei successivi passaggi del ragionamento.</rdfs:comment>
+        <rdfs:label>Follow-Up Question</rdfs:label>
     </owl:Class>
     
 
@@ -853,7 +910,10 @@
 
     <!-- http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#IntermediateAnswer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#IntermediateAnswer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#IntermediateAnswer">
+        <rdfs:comment>Classe che rappresenta una risposta intermedia ottenuta durante l&apos;applicazione della tecnica Self-Ask. Ogni risposta è associata a una domanda di approfondimento e può essere utilizzata per formulare le domande successive, contribuendo alla costruzione della risposta finale.</rdfs:comment>
+        <rdfs:label>Intermediate Answer</rdfs:label>
+    </owl:Class>
     
 
 
@@ -867,13 +927,18 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Classe che rappresenta una condizione numerica appartenente al problema originale, utilizzata nel processo Condition Mask Verification per verificare la correttezza delle risposte candidate attraverso la ricostruzione delle condizioni mascherate.</rdfs:comment>
+        <rdfs:label>Numeric Problem Condition</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#ProblemCondition -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#ProblemCondition"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#ProblemCondition">
+        <rdfs:comment>Classe che rappresenta una condizione appartenente al problema originale, utilizzata nei processi di verifica della tecnica Self-Verification. Le condizioni possono essere analizzate o ricostruite per valutare la correttezza delle risposte candidate.</rdfs:comment>
+        <rdfs:label>Problem Condition</rdfs:label>
+    </owl:Class>
     
 
 
@@ -912,6 +977,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RephrasedQuestion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Tecnica di Prompt Engineering che prevede la riformulazione della domanda originale per migliorarne la chiarezza e l&apos;interpretazione da parte del modello linguistico, prima di procedere alla generazione della risposta.</rdfs:comment>
+        <rdfs:label>RaR</rdfs:label>
     </owl:Class>
     
 
@@ -923,6 +990,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#hasFeedback"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Feedback"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#followsRefinementIteration"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#precedesRefinementIteration"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -939,6 +1018,8 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Response"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Classe che rappresenta una singola iterazione del processo di raffinamento della tecnica Self-Refine, nella quale una risposta viene valutata attraverso un feedback e successivamente migliorata. Più iterazioni possono essere collegate in sequenza per rappresentare il progressivo perfezionamento della risposta.</rdfs:comment>
+        <rdfs:label>Refinement Iteration</rdfs:label>
     </owl:Class>
     
 
@@ -953,6 +1034,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#Prompt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Classe che rappresenta una domanda riformulata attraverso la tecnica Rephrase and Respond (RaR), con l&apos;obiettivo di migliorare la chiarezza e l&apos;interpretazione della richiesta originale prima della generazione della risposta.</rdfs:comment>
+        <rdfs:label>Rephrased Question</rdfs:label>
     </owl:Class>
     
 
@@ -973,6 +1056,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#FollowUpQuestion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Una tecnica di suggerimento che valuta le risposte dei candidati utilizzando processi di verifica a ritroso prima di selezionare una risposta finale.</rdfs:comment>
+        <rdfs:label>Self-Ask</rdfs:label>
     </owl:Class>
     
 
@@ -987,6 +1072,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#RefinementIteration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Tecnica di Prompt Engineering basata su un processo iterativo di raffinamento delle risposte, nel quale una risposta iniziale viene valutata mediante feedback e successivamente migliorata attraverso una o più iterazioni, fino a ottenere una risposta raffinata.</rdfs:comment>
+        <rdfs:label>Self-Refine</rdfs:label>
     </owl:Class>
     
 
@@ -1007,6 +1094,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#BackwardVerification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Una tecnica di suggerimento che valuta le risposte dei candidati utilizzando processi di verifica a ritroso prima di selezionare una risposta finale.</rdfs:comment>
+        <rdfs:label>Self-Verification</rdfs:label>
     </owl:Class>
     
 
@@ -1052,13 +1141,18 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Classe che rappresenta una modalità di verifica a ritroso basata sulla valutazione di affermazioni vero/falso, utilizzata dalla tecnica Self-Verification per verificare la correttezza delle risposte candidate e supportare la selezione della risposta finale.</rdfs:comment>
+        <rdfs:label>True-False Item Verification</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/robertobarile/ontologies/2026/4/untitled-ontology-11#VerificationProcess">
+        <rdfs:comment>Classe che rappresenta un processo di verifica delle risposte candidate, utilizzato dalla tecnica Self-Verification per valutarne l&apos;attendibilità e contribuire alla selezione della risposta finale.</rdfs:comment>
+        <rdfs:label>Verification Process</rdfs:label>
+    </owl:Class>
     
 
 
